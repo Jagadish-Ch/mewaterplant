@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+@media  screen and (max-width: 600px) {
+.report-pg-title{
+    font-size: 8vw;
+}
+table{
+    margin:2em 3%;
+}
+
+.table{
+    padding: 12px;
+    font-size: 4vw;
+    /*max-width: fit-content;*/
+    border-collapse: collapse;
+}
+.table th, .table thead{
+    display: none;
+}
+.table tr{
+    border-radius: 40px;
+    border-bottom: 100px solid #dae8ec;
+}
+.table, .table tbody, .table td{
+    display: block;
+    /*max-width: 100%;*/
+    padding:3px;
+    outline-width: 0.5px;
+    
+}
+.table tr .e-space{
+    width: 92vw;
+}
+
+.table td{
+    min-height: 9vh;
+}
+
+.table .tbl-header{
+    font-size: 6vw;
+    padding: 30px;
+    border: 3px solid black;
+    background-color: black;
+    color: white;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.table .tbl-data{
+    font-size: 2vh;
+    font-weight: 600;
+    /*height: 5rem;*/
+    color: #433500;
+    text-align: right;
+    padding: 14px;
+    padding-left: 50%;
+    position: relative;
+    background-color: rgb(233, 232, 232);
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    letter-spacing: 1px;
+}
+
+.table .tbl-data:before{
+    color: black;
+    text-align: left;
+    content: attr(aria-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: 700;
+    
+}
+.table .reason-block{
+    padding-left:0;
+    text-align: center;
+}
+
+
+.table .tbl-data:nth-child(even){
+    background-color: gainsboro;
+}
+.table .action-btn{
+    padding: 30px;
+    border: 4px solid black;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: rgb(80, 80, 80);
+}
+.table .tbl-save-btn{
+    background-color: rgb(14, 154, 14);
+    color: whitesmoke;
+    height: auto;
+    min-width: 20vw;
+    font-size: 5vw;
+    padding: 13px;
+    margin:8px;
+    border: 1px solid whitesmoke;
+    
+}
+.table .tbl-save-btn:hover{
+    background-color: whitesmoke;
+    color: green;
+}
+.table .tbl-delete-btn{
+    background-color: red;
+    height: auto;
+    min-width: 15vw;
+    color: whitesmoke;
+    font-size: 5vw;
+    padding: 13px;
+    border: 1px solid whitesmoke;
+    
+}
+.table .tbl-delete-btn:hover{
+    background-color: gainsboro;
+    color: red;
+}
+}

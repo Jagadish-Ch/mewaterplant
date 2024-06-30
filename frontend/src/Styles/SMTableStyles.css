@@ -1,0 +1,125 @@
+/*
+*{
+    box-sizing: border-box;
+}
+
+table{
+    margin:2em;
+    border-radius: 10px;
+    position: relative;
+}
+
+thead tr th, thead{
+    background-color: rgb(64, 61, 61);
+    color:#ddd8d8;
+    padding: 3px 6px;
+    outline: 2px solid black;
+    
+}
+th{
+    position: sticky;
+    top: 0;
+}
+tbody tr td{
+    text-align: center;
+    color: black;
+    font-weight: 500;
+    padding: 5px 1em;
+    outline: 2px solid rgb(93, 93, 93);
+}
+
+tbody tr:hover{
+    background-color: rgba(184, 184, 184, 0.972);
+    
+}
+
+.date-time{
+    padding:1em;
+}
+.lists-container{
+    display: none;
+    
+}
+.each-card{
+    border: 2px solid;
+    border-radius: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    margin: 0px 1.5em 2.5em;
+    
+}
+
+.card-title{
+    margin-top: 0px;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+    padding: 0px 2em;
+    background: #000;
+    color: #fff;
+    padding: 0.1rem;
+    text-align: left;
+}
+
+.card-title h2{
+    text-align: center;
+    font-size: 3em;
+}
+
+.card-title h4{
+    text-align: center;
+    font-size: 2em;
+}
+
+.card{
+    font-size: 35px;
+    padding: 2em 0.5em 2em 1em;
+    
+}
+
+
+.list-headers{
+    font-weight: bold;
+    padding: 6px;
+}
+
+
+@media screen and (max-width: 479px){
+    .lists-container {
+      display: block;
+    }
+    .report-table-data{
+        display: none;
+    }
+    
+}
+
+dl {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  
+}
+
+dl > * {
+  flex: 0 0 50%;
+  margin: 0;
+  text-align: left;
+  padding: 6px;
+  font-weight: 500;
+}
+
+dt {
+  text-align: center;
+  font-weight: 670;
+  text-align: left;
+}
+
+.flex-btn{
+    display: block;
+    justify-content: space-between
+}
+
+.btn-size{
+    width: 7em;
+    margin-left:2.5em;
+}
+    */

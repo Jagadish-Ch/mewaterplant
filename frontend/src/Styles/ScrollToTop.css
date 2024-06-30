@@ -1,0 +1,23 @@
+.scroll-btn{
+    display: none;
+}
+.scroll-to-top{
+    position: fixed;
+    padding: 2rem;
+    bottom: 40px;
+    right: 1%;
+    background-color: transparent;
+    border: none;
+}
+
+.up-arrow{
+    max-height:10vh;
+    max-width: 10vw;
+    border-radius: 100%;
+}
+
+@media screen and (max-width: 600px){
+    .scroll-btn{
+        display: block;
+    }
+}

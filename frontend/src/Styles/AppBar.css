@@ -1,0 +1,16 @@
+.list-btn{
+    padding: 12px;
+}
+.s-nav-btn{
+    font-size: 5vw;
+    font-weight: bold;
+    height: auto;
+    width: 40vw;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    border: 3px solid whitesmoke;
+    background-color: #053A63; /* #053A63 */
+    color: whitesmoke;
+    text-decoration: none;
+}

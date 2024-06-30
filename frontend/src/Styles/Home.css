@@ -1,0 +1,123 @@
+*{
+  box-sizing: border-box;
+  
+}
+body {
+  background: #dae8ec;
+  color:rgb(3, 39, 70);
+  
+}
+
+.home-title{
+  background-color: #053A63;
+  color:#dae8ec;
+  font-size: 1.7em;
+  font-style: oblique;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-stretch: condensed;
+  border: 5px solid black;
+  margin-bottom: 4%;
+  position: relative;
+}
+.home{
+  box-sizing: border-box;
+  display: flex;
+}
+.home-text-shadow{
+  text-shadow: 3px 3px 0 black, 3px 3px 0 black, 3px 3px 0 black, 3px 3px 0 black;
+}
+.can-img{
+  position: relative;
+  height:26em;
+  justify-content: space-between;
+}
+#myVideo{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0em;
+  object-fit: cover;
+    width: 100%; 
+    height: 100%;
+  align-items: center;
+}
+.deleted-history{
+  text-decoration: none;
+  color: #260483;
+}
+.deleted-history:hover{
+  color:#fff
+}
+.default {
+  color: #fff;
+  width: 160px;
+  height: 60px;
+  padding: 10px 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: large;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+  /* 15 */
+.btn-15 {
+    color: #260483;
+    border: 1px solid#260483;
+    box-shadow: 0 0 5px #260483, 0 0 5px #260483 inset;
+    z-index: 1;
+    margin:10px;
+  }
+  .btn-15:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background: #260483;
+    box-shadow:
+     0 0 20px  #260483;
+    transition: all 0.3s ease;
+  }
+  .btn-15:hover {
+    color: #fff;
+  }
+  .btn-15:hover:after {
+    left: 0;
+    width: 100%;
+  }
+  .btn-15:active {
+    top: 2px;
+  }
+  
+  /* 15 */
+
+  .btns{
+    position: relative;
+    display: grid;
+    padding: 2em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+  @media screen and (max-width: 600px){
+    .home-title{
+      font-size: 5vw;
+    }
+    #myVideo{
+      height: 90%;
+    }
+    .default{
+      height: auto;
+      width: 40vw;
+      font-size: 4vw;
+    }
+    .btns{
+      padding:25%
+    }
+  }

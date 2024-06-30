@@ -1,0 +1,140 @@
+.mbl-searchBox{
+    display: none;
+}
+.searchBox {
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    background: #2f3640;
+    height:auto;
+    border-radius: 40px;
+    padding: 5px;
+    
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0px 20px;
+    
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    
+}
+
+.search-icon{
+    height: 2em;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    color: white;
+    font-size: 20px;
+    transition: 1s;
+    line-height: 40px;
+    width: 0px;
+    
+
+}
+
+.dropdown{
+    color:whitesmoke;
+    background-color:black;
+    max-width: 90px;
+    height:2.1em;
+    border-top-left-radius:40px;
+    border-bottom-left-radius:40px;
+}
+
+@media screen and (max-width: 600px) {
+.searchBox:hover > .searchInput {
+    width: 55%;
+    padding: 0 6px;
+}
+}
+
+@media screen and (max-width: 600px){ /*479*/
+    .searchBox{
+        display: none;
+    }
+    .mbl-searchBox{
+        display: flex;
+        padding: 5%;
+    }
+    .select-dd{
+        width: 25%;
+        background-color: black;
+        color: whitesmoke;
+        border-radius:40px 0px 0px 40px;
+    }
+    .mbl-sb-input{
+        width:80%;
+        padding: 8px;
+        font-size: large;
+        font-weight: 600;
+        border: 2px solid black;
+        background-color: #b4b3b3;
+        color: black;
+    }
+    .s-icon{
+        border:2px solid black;
+        width: 50px;
+        background-color: #2f3640;
+        border-radius:0px 40px 40px  0px  ;
+    }
+    .s-icon:hover {
+        background-color: rgb(165, 165, 165);
+    }
+    /*.dropdown{
+        height: 1.2em;   
+    }
+    .searchBox:hover > .dropdown {
+        width: 20%;
+        padding: 0 6px;
+    }
+    .dropdown .dd-body{
+        font-size: 3vw;
+    }
+    .searchBox{
+        position: relative;
+        top: -3%;
+        left: 50%;
+        height: 4em;
+        padding:1px;
+        margin: 0px 100px 0px 10px;
+    }
+    .searchButton {
+        height: 4.5em;
+        width:5em;
+        font-size: auto;
+    }
+    .searchInput{
+        font-size: 2.5em;
+        height: fit-content;
+        max-width: 90%;
+        margin: 7px 0px 7px 2px;
+    }
+    .search-icon{
+        height: 3em;
+    }*/
+    
+}

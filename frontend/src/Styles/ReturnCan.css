@@ -1,0 +1,93 @@
+
+*{
+    box-sizing: border-box;
+}
+
+table{
+    padding:2%;
+    border-radius: 10px;
+    position: relative;
+}
+
+thead tr th, thead{
+    background-color: rgb(64, 61, 61);
+    color:#ddd8d8;
+    padding: 3px 6px;
+    outline: 2px solid black;
+    
+}
+th{
+    position: sticky;
+    top: 0;
+}
+tbody tr td{
+    text-align: center;
+    color: black;
+    font-weight: 500;
+    padding: 5px 1em;
+    outline: 2px solid rgb(93, 93, 93);
+}
+
+tbody tr:hover{
+    background-color: rgba(184, 184, 184, 0.972);
+    
+}
+.flex-btns{
+    padding-top: 2em;
+    display: flex;
+}
+.action {
+    height:5vh;
+    width: 5em;
+    font-weight: bolder;
+    font-variant: initial;
+    border-radius: 10px;
+    color: rgb(200, 232, 233);
+    border: 1.5px solid #989393;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.green-btn{
+    background-color: rgb(16, 163, 34);
+}
+.red-btn{
+    background-color: rgb(251, 6, 6);
+}
+
+.green-btn:hover {
+    background-color: #e7e7e7;
+    color: rgb(16, 163, 34);
+}
+.red-btn:hover {
+    background-color: #e7e7e7;
+    color: rgb(251, 6, 6);
+}
+
+@media screen and (max-width: 600px){
+    /*.title{
+        margin-top: 1em;
+        font-size: 3em;
+    }
+    .table-title{
+        margin-top: -1em;
+        font-size: 3em;
+    }
+    .action{
+        height: 10vh;
+        width:7em;
+        margin: 1% 0px 10% 33%;
+        font-size: 2em;
+        font-weight: bolder;
+    }
+    .order-prompt-title{
+        font-size: 3em;
+    }
+    .flex-btns{
+        padding-top: 5em;
+        display: flex;
+    }
+*/
+    /* input style={{height:'2.4em', fontSize:'2.2em'}} */
+    /* Button style={{fontSize:'1.6em'}} */ 
+
+}
