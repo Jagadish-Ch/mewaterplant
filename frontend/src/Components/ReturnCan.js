@@ -7,7 +7,6 @@ import { ReturnCanFunctions} from '../inputForm/ReturnCanFunctions';
 import '../Styles/ReturnCan.css';
 import { baseURL } from './baseURL';
 import Swal from 'sweetalert2';
-import SMTables from './SMTables';
 import ScrollToTop from './ScrollToTop';
 import SearchBar from './SearchBar';
 import { Link } from 'react-router-dom';
