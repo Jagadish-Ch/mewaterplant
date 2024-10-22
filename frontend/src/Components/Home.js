@@ -13,7 +13,7 @@ const Home = () => {
           width='100%'
           direction='left'
           height='100%'
-          ><h1 className='home-text-shadow'><span>&#9827;</span> Sri Vigneswara Water Plant <span>&#9827;</span> </h1></marquee>
+          ><h1 className='home-text-shadow'><span>&#9827;</span>  Water Plant - (Plant Name) <span>&#9827;</span> </h1></marquee>
       </div>
       
       <div>

@@ -158,13 +158,6 @@ const Report = () => {
     navigate('/report/:id')
   }
 
-  const headers = ['Mobile Number', 'Address', 'Water Type','క్యాన్ నంబర్',
-                    'ఇచ్చిన క్యాన్లు', 'తిరిగి ఇచ్చిన క్యాన్లు', 'Pending క్యాన్లు', 'ఇచ్చిన Amount',
-                    'Paid / NotPaid'];
-  const apiHeaders = ['MobileNo', 'Address', 'WaterType','CanNo',
-                    'TotalCans', 'ReturnedCans', 'RemainingCans', 'Amount',
-                    'PaidOrNot'];
-
   let totalGivenCans = 0;
   let totalReturnedCans = 0;
   let totalPendingCans = 0;
@@ -220,6 +213,7 @@ const Report = () => {
             </tr>
             
           </thead>
+          
 
           <tbody>
 
@@ -231,7 +225,7 @@ const Report = () => {
               
               
             <tr key={i}>
-              
+        
               <td className='tbl-header date-time.'>{user.DateTime}</td>
               <td className='tbl-data' aria-label='Name'>{user.Name}</td>
               <td className='tbl-data' aria-label='Mobile No.'>{user.MobileNo}</td>
@@ -267,24 +261,17 @@ const Report = () => {
                     PendingCanNo.join(", "),
                     RemainingCans,
                     user.Amount,
-                    user.PaidOrNot
-
+                    user.PaidOrN
                   )}>Delete</button></Link>
               </td> 
             </tr>
-            
+
           )})}
           </tbody>
         </table>
       </div>
       </center>
       <ScrollToTop/>
-      {/*<SMTables location='home' 
-      openPromptForm={openPromptForm} 
-      headers={headers} 
-      apiHeaders={apiHeaders} 
-      records={records}
-      setIsUpdated={setIsUpdated}/>*/}
     </div>
       
   )
