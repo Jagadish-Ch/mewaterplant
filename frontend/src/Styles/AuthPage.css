@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px;
+  overflow: scroll;
+}
+.body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("/public/raindrops-glass.jpg"), #000000;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+  overflow: scroll;
+}
+.wrapper {
+  width: 400px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(8px);
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #000000;
+}
+.input-field {
+  position: relative;
+  border-bottom: 2px solid #000000;
+  margin: 15px 0;
+}
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+.input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  padding:10px;
+}
+.input-field input:focus~label,
+.input-field input:valid~label,
+.input-field input:placeholder-shown
+ {
+  font-size: 1rem;
+  top: 10px;
+  transform: translateY(-150%);
+}
+.show-pswd {
+  text-align: end;
+}
+#show-password {
+  accent-color: white;
+  text-decoration: none;
+}
+
+.forget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0 35px 0;
+  color: #f7f9fb;
+  font-weight: 600;
+}
+#remember {
+  accent-color: #fff;
+}
+.forget label {
+  display: flex;
+  align-items: center;
+
+}
+.forget label p {
+  margin-left: 8px;
+}
+/* .otp-form { */
+  /* margin: 20px 10px;
+  position: absolute;
+  height: calc(100vh - 6rem);
+  width: 25rem;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 3px solid rgba(255, 255, 255, 0.5); */
+/* } */
+
+.otp-wrapper {
+  /* background: red; */
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.otp-wrapper .otp-input {
+  width: 48px;
+  height: 48px;
+  padding: 1px;
+  font-size: x-large;
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+  background: transparent;
+  border: 2.5px solid #000;
+}
+
+.wrapper a,
+.wrapper span
+{
+  color: #ffffff;
+  text-decoration: none;
+}
+.wrapper a:hover,
+.wrapper span:hover {
+    cursor: pointer;
+  text-decoration: underline;
+}
+button {
+  background: #fff;
+  color: #000;
+  margin-top: 10px;
+  font-weight: 800;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+button:hover {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+.active-tab {
+  text-align: center;
+  margin-top: 30px;
+  color: #ffffff;
+}
+
+/* Forgot */
+
+.single-input input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  padding:10px;
+  margin: 30px 0;
+}

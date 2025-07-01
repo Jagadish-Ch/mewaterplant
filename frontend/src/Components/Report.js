@@ -23,12 +23,21 @@ const Report = () => {
   const [isUpdated, setIsUpdated] = useState(false);
   const [Option, setOption] = useState("CanNo")
   
+  
   // ================= Getting/Retriving Data from DB =================
   useEffect(() => {
     axios.get(`${baseURL}/report`)
+    // https://mybusiness.great-site.net/index.php
+    // axios.post('http://localhost/php-proxy/index.php', {
+    //   query: "SELECT * FROM customers"
+    // },{
+    //   headers:{
+    //     'Content-Type': 'application/json',
+    //   }
+    // })
     .then(response => {
       setUsers(response.data);
-      setRecords((response.data).reverse());
+      setRecords((response.data));
     })
     .catch(err => { 
       console.log(err)});
@@ -64,7 +73,7 @@ const Report = () => {
       }
       try{
       
-        await axios.post('https://sheet.best/api/sheets/7b4327a8-9bac-4954-96b7-bd0ed62cbac9', userDeleteData)
+        // await axios.post('https://sheet.best/api/sheets/7b4327a8-9bac-4954-96b7-bd0ed62cbac9', userDeleteData)
         await axios.delete(`${baseURL}/report/${id}`)
         .then(() =>{
           Swal.fire({
@@ -218,6 +227,7 @@ const Report = () => {
           <tbody>
 
           {records.map((user,i) => {
+            console.log(user)
             const RemainingCans = user.TotalCans-user.ReturnedCans;
             const PendingCanNo =
                   (user.CanNo).filter((element) => !(user.ReturnedCanNo).includes(element));

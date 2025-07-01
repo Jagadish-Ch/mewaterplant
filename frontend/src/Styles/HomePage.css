@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #e6f5ff;
+  color: #1e2a38;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex: 0 0 33.3333%;
+  flex-direction: column;
+}
+
+.main-section {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.main-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #454545;
+  margin-bottom: 2rem;
+  word-break: break-word;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  margin: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  text-align: left;
+  margin: 3px;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.card .icon {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: #0077cc;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.card p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 1.5rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}

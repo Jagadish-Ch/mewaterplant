@@ -1,0 +1,319 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainColor: #003366;
+    --mainColorLight: #5767aa;
+    --secondaryColor: #DB2B39;
+    --textColor: #eee;
+    --btn-text-color: white;
+    --login-bg-color: rgba(2, 77, 17, 0.867);
+    --logout-bg-color:rgba(160, 8, 8, 0.867);
+}
+
+
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+/* padding: 1rem 2rem; */
+padding: 0rem 2rem;
+background-color: var(--mainColor);
+color: var(--textColor);
+}
+
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.logo .cans-icon {
+  height: 3rem;
+  padding: 0;
+  margin: 0;
+}
+
+.logo .logo-title {
+  background: repeating-linear-gradient(120deg, white 0, rgb(252, 223, 35) 100%, white 20%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 0;
+  animation: move 10s infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move {
+  0%{
+    background-position: 0;
+  }
+  50%{
+    background-position: 30px;
+  }
+  100%{
+    background-position: 400px;
+  }
+  
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+
+
+/* .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0px 22px;
+} */
+
+.nav-links > span {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 2px;
+
+  &:hover {
+    color: var(--secondaryColor);
+  }
+}
+
+.navbar .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbar .nav-btn {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .navbar .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--mainColor);
+        transition: 1s;
+        transform: translateY(-100vh);
+    }
+
+    .navbar .responsive-nav {
+        transform: none;
+        z-index: 2;
+    }
+    
+    .nav-links .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .nav-links  span {
+        font-size: 1.5rem;
+    }
+}
+
+.nav-links .user-name:hover {
+  cursor: pointer;
+}
+
+.navbar .avatar {
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  background: white;
+  border: 3px solid white;
+  /* border-color: linear-gradient( 180deg,#000, #fff, #000); */
+  border-radius: 50%;
+  background-image: url('../ImagesIcon/user-dark.png');
+  background-size: cover;
+}
+
+.navbar .avatar:hover {
+  transform: scale(1.1);
+}
+
+.sign-in-btn {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  padding: 8px 14px;
+  background: white;
+  font-weight: 600;
+  color: black;
+  border: none;
+  border-radius: 10px;
+}
+
+.sign-in-btn span {
+  color: auto;
+}
+
+.sign-in-btn i{
+  font-size: 2rem;
+  margin-left: 2px;
+}
+
+.sign-in-btn:hover{
+    color: var(--login-bg-color);
+  }
+
+.profile-card {
+  position: absolute;
+  
+  top: 11%;
+  right: 3%;
+  height: auto;
+  width: 12em;
+  padding: 8px 10px;
+  background: rgb(217, 217, 217);
+  border: 2px solid whitesmoke;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.profile-card.show {
+  visibility: visible;
+  animation: appearIn 1s;
+}
+
+.profile-card.hidden {
+  visibility: hidden;
+  animation: appearOut 0.5s;
+}
+
+@keyframes appearIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appearOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.profile-card button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.profile-card h4 {
+  word-wrap: break-word;
+  color: rgb(0, 0, 0);
+  font-size: medium;
+  font-weight: 800;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.profile-card .profile-btn .login {
+  
+  background-color: var(--login-bg-color);
+  color: var(--btn-text-color);
+}
+
+.profile-card .profile-btn .login:hover{
+    background-color: transparent;
+    border-color: var(--login-bg-color);
+    color:var(--login-bg-color);
+  }
+
+.profile-card .profile-btn .logout{
+  background-color: var(--logout-bg-color);
+  color: var(--btn-text-color);
+}
+
+.profile-card .profile-btn .logout:hover{
+    background-color: transparent;
+    border-color: var(--logout-bg-color);
+    color:var(--logout-bg-color);
+}
+
+.profile-btn .logout i {
+  font-size: 2rem;
+  margin-left: 3px;
+  &:hover{
+    color: var(--logout-bg-color);
+  }
+}
+
+.inner-ele {
+  display: none;
+}
+
+/* Responsive tweaks */
+/* @media (max-width: 768px) {
+  .navbar {
+    /* flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    /* margin-top: 0.5rem; 
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-links .sign-in-btn span {
+    display: none;
+  }
+
+  .nav-links .sign-in-btn {
+    background-color: transparent;
+    color: white;
+  }
+} */
+
+@media only screen and (max-width: 325px) {
+  .sign-in-btn {
+    display: none;
+  }
+  .inner-ele {
+    display: block;
+  }
+}

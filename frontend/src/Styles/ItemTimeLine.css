@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.timeline-wrapper {
+    
+    background-color: red;
+    position: relative;
+}
+
+.timeline-wrapper .content {
+    background-color: blue;
+}
+
+.timeline-wrapper h2 {
+    font-weight: 800;
+    font-size: clamp( 1rem, 1.8rem, 2rem);
+    margin: 0px;
+    margin-top: 30px;
+    text-align: center;
+    background-color: gold;
+    height: 100%;
+    padding: 4px auto;
+}
+
+.timeline {
+    position: relative;
+    height: 100%;
+    max-width: 80%;
+    background-color: green;
+    margin: 0px;
+    margin: 10px auto;
+    padding: 20px 40px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 100%;
+    animation: moveLineDown 4s linear forwards;
+    background-color: blueviolet;
+    z-index: 1;
+}
+
+@keyframes moveLineDown {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+.customer-container {
+    position: relative;
+    width: 50%;
+    padding: 20px 30px;
+}
+
+.customer-container:nth-child(odd) {
+    position: relative;
+    left: 0;
+    top: 0;
+    background-color: azure;
+
+    & .block {
+        width: 100%;
+        justify-items: right;
+        text-align: right;
+    }
+
+    & .block .indicator-icon  {
+        align-items: center;
+        left: 102%;
+        z-index: 2;
+    }
+
+}
+.customer-container:nth-child(even) {
+    position: relative;
+    left: 51%;
+    top: 0;
+    background-color: bisque;
+
+    
+    & .block .indicator-icon  {
+        left: -55px;
+        z-index: 2;
+    }
+}
+
+.customer-container .block {
+    position: relative;
+}
+.customer-container .block .indicator-icon {
+    position: absolute;
+    padding: 5px;
+    border: 2px solid black;
+    background-color: gray;
+    border-radius: 50%;
+    & i {
+        font-size: 2rem;
+        color: white;
+    }
+}
+
+.customer-container .text-box {
+    background-color: aqua;
+    border-radius: 10px;
+    width: 50%;
+    padding: 10px 15px;
+}
+
+.customer-container .block .text-box .date-time {
+    color: blue;
+    margin-bottom: 5px;
+    
+}

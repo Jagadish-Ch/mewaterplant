@@ -1,18 +1,27 @@
-const express = require('express')
-const mongoose = require('mongoose')
-const cors = require('cors')
-const {AdminModel, UserModel, ReportModel} = require('./Model/MySchema')
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const {AdminModel, UserModel, ReportModel} = require('./models/MySchema');
+const { connectDB } = require('./config/mongooseDB');
+const cookieParser = require('cookie-parser');
+const authRoute = require('./routes/authRoutes');
+const dotenv = require('dotenv');
+dotenv.config();
 
-const app = express()
+const app = express();
+const PORT = process.env.PORT || 5000
 
-app.use(cors())
-app.use(express.json())
+app.use(express.json());
+app.use(cookieParser());
+app.use(cors({origin: "http://localhost:3000", credentials:true}));
+connectDB();
 
-mongoose.connect('mongodb+srv://jagadish:jagadish@cluster0.xkb5tzh.mongodb.net/wpm_server_db?retryWrites=true&w=majority&appName=Cluster0')
-.then(()=>{
-    console.log("DB Connected...")
-})
-.catch(err => console.log(err))
+
+// mongoose.connect('mongodb+srv://jagadish:jagadish@cluster0.xkb5tzh.mongodb.net/wpm_server_db?retryWrites=true&w=majority&appName=Cluster0')
+// .then(()=>{
+//     console.log("DB Connected...")
+// })
+// .catch(err => console.log(err))
 
 app.get("/", (req,res) =>{
     res.send(`
@@ -24,7 +33,9 @@ app.get("/", (req,res) =>{
             <a href="/report"><h2>/report</h2></a>
         </center>`
     )
-})
+});
+
+app.use("/api/auth", authRoute);
 
 app.post("/admin", (req,res) => {
     AdminModel.create(req.body)
@@ -101,6 +112,6 @@ app.delete("/report/:id", (req,res) => {
 })
 
 
-app.listen(3001, ()=>{
-    console.log("Server Running...")
-})
+app.listen(PORT, ()=>{
+    console.log(`Server Running on PORT ${PORT}`);
+});
